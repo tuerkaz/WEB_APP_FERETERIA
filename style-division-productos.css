@@ -1,0 +1,142 @@
+.divisiones-pag-productos{
+    display: flex;
+    aside{
+        border-style: solid;
+        border-color: rgb(128, 58, 58);
+        margin: 6% 2%;
+        border-radius: 10px;
+        width: 20%;
+        margin-right: 5%;
+        h2{
+            text-align: center;
+            border-bottom: solid;
+            border-color: rgb(128, 58, 58);
+        }
+        .filtro-Marca, .filtro-Tipo, .filtro-Precio{
+            border-bottom: solid;
+            border-color: rgb(128, 58, 58);
+            .submenu-Marca, .submenu-Tipo, .submenu-Precio{
+                display:flex;
+                justify-content: space-between;
+                margin: 3% 3%;
+                button{
+                    width: 10%;
+                    background-color: transparent;
+                    border-style: none;
+                    padding: 0%;
+                }
+            }
+            .busqueda-producto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                input{
+                    background-color: black;
+                    color: white;
+                    border-radius: 10px;
+                    width: 90%;
+                    height: 25px;
+                    padding-left: 3%;
+                }
+            }
+            .marca-Producto{
+                display: flex;
+                justify-content: space-around;
+                margin: 8% 7%
+            }
+            ul{
+                padding-left: 10%;
+            }
+            .rango-Precio{
+                display: flex;
+                justify-content: space-evenly;
+                padding: 5% 10%;
+                margin-left: 0%;
+                left: 0%;
+                input{
+                    width: 20%;
+                    height: 20px;
+                }
+                button{
+                    width: 10%;
+                    background-color: transparent;
+                    border-style: none;
+                    padding: 0%;
+                }
+            }
+        }
+    }
+    .productos-Seccion{
+        align-items: center;
+        h1{
+            text-align: center;
+            width: 100%;
+            margin: 3%;
+        }
+        .productos{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-left: 1%;
+            margin-right: 1%;
+            gap: 1%;
+            .producto{
+                border-color: black;
+                border-style: solid;
+                figure{
+                    padding: 0;
+                    margin: 0;
+                    width: 190px;
+                    height: 200px;
+                    .img_producto{
+                        width: 190px; 
+                        border-bottom: solid;
+                    }
+                }
+                .info-producto{
+                    text-align: center;
+                    font-size: 65%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:810px){
+    .divisiones-pag-productos{
+        display:grid;
+        /*grid-template-rows: 1fr 1fr;*/
+        aside{
+            display: none;
+        }
+        .productos-Seccion{
+            height: 1290px;
+            h1{
+                font-size: 90%;
+                width: 90%;
+            }
+            .productos{
+                grid-template-columns: repeat(1,1fr);
+                .producto{
+                    display: flex;
+                    figure{
+                        width: 135px;
+                        height: 135px;
+                        .img_producto{
+                            width: 135px;
+                            border-bottom: none;
+                            border-right: solid;
+                        }
+                    }
+                    .info-producto{
+                        padding-top: 3%;
+                        width: 100%;
+                        line-height: 200%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
